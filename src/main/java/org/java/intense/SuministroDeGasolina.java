@@ -1,0 +1,32 @@
+package org.java.intense;
+
+import java.util.Scanner;
+
+public class SuministroDeGasolina {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double medidaActual;
+
+        System.out.println("Ingrese la medida actual del estanque (capcidad max 70 litros): ");
+        medidaActual = scanner.nextDouble();
+
+        if (medidaActual >= 0 && medidaActual < 20) {
+            System.out.println("Insuficiente");
+        } else {
+            if (medidaActual >= 20 && medidaActual < 35) {
+                System.out.println("Suficiente");
+            } else if (medidaActual >= 35 && medidaActual < 40) {
+                System.out.println("Medio Estanque");
+            } else if (medidaActual >= 40 && medidaActual < 60) {
+                System.out.println("Estanque 3/4");
+            } else if (medidaActual >= 60 && medidaActual < 70) {
+                System.out.println("Estanque casi lleno");
+            } else if (medidaActual == 70) {
+                System.out.println("Estanque lleno");
+            }
+        }
+    }
+}
